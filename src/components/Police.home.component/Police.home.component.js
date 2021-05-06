@@ -17,7 +17,7 @@ class PoliceHomeComponent extends Component{
     }
 
     async componentDidMount(){
-        console.log("PoliceHomeComp componentDidMount()called")
+        //console.log("PoliceHomeComp componentDidMount()called")
         const res = await axios.get("/api/v1/vehicle/reports/all", {
             headers : {
                 token : this.props.token
@@ -25,7 +25,7 @@ class PoliceHomeComponent extends Component{
         });
 
         // res.data.data contains array.
-        console.log(res.data.data);
+        //console.log(res.data.data);
         this.setState({reportedData: res.data.data});
     }
 

@@ -6,7 +6,7 @@ const tollcomp = (props)=>{
 
     async function handleSubmit(e){
         e.preventDefault();
-        console.log("Submit button clicked");
+        //console.log("Submit button clicked");
         const img = document.getElementById("num-plate").files[0];
 
         const formData = new FormData();

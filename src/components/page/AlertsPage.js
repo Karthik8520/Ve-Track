@@ -21,7 +21,7 @@ class Alerts extends Component{
                 token : this.props.token
             }
         })
-        console.log("response : ",res);
+        //console.log("response : ",res);
         this.setState({data: res.data.data});
     }
 

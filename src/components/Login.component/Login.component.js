@@ -35,7 +35,7 @@ class login extends Component{
                 }
             })
             userRole = userRole.data.data;
-            console.log(userRole);
+            //console.log(userRole);
             this.props.setUser({
                 token: res.data.token,
                 role: userRole
@@ -54,13 +54,13 @@ class login extends Component{
     }
 
     componentDidMount(){
-        console.log("Login componentDidMount called");
+        //console.log("Login componentDidMount called");
         window.localStorage.removeItem("persist:root");
         this.props.setUser(null);
     }
 
     render(){
-        console.log("Login Component render methode called");
+        //console.log("Login Component render methode called");
         return (
             <div id="login-container">
                 <Header />

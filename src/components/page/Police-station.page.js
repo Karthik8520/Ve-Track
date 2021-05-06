@@ -4,7 +4,7 @@ import PoliceHomeComponent from "../Police.home.component/Police.home.component"
 
 
 const policeStationPage = (props)=>{
-    console.log(props.role)
+    //console.log(props.role)
     const role = props.role
     return (
         props.role==="police-station" ? 

@@ -9,8 +9,8 @@ const {useState} = require("react");
 function OTP_page(props){
 
     const [otp, setOTP] = useState("");
-    console.log("props token: ", props)
-    console.log(props.otp_data); // contains mobileNumber, id and number(vehicle number), action
+    // console.log("props token: ", props)
+    // console.log(props.otp_data); // contains mobileNumber, id and number(vehicle number), action
 
     async function createReport(id, number, token){
         const data = {
@@ -36,7 +36,7 @@ function OTP_page(props){
     const handleClick = async (e)=>{
         e.preventDefault();
         // check from db if the entered OTP is correct
-        console.log(props.otp_data);
+        //console.log(props.otp_data);
         const data = {
             otp,
             user_id : props.otp_data.id,
@@ -48,7 +48,7 @@ function OTP_page(props){
                 token: props.token
             }
         })
-        console.log(response);
+        //console.log(response);
         if(response.data.result=="correct" && data.action=="createReport")
         {
             // create stolen report

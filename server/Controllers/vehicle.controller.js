@@ -18,8 +18,8 @@ const handle_vehicle_registeration = (db_model, data, res)=>{
             data: response
         })
     }).catch((err)=>{
-        console.log("error from handle register vehicle")
-        console.log(err);
+        // console.log("error from handle register vehicle")
+        // console.log(err);
         res.status(404).json({
             status: "fail",
             err

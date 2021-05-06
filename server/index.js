@@ -14,8 +14,8 @@ app.use("/api/v1/otp", otpRouter);
 
 
 app.use((err, req, res, next)=>{
-    console.log("Error caught from Default Error hadler middleware.");
-    console.log(err);
+    // console.log("Error caught from Default Error hadler middleware.");
+    // console.log(err);
     res.json({
         status : "fail",
         err

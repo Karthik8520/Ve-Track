@@ -16,7 +16,7 @@ class VehiclePage extends Component{
 
     async componentDidMount(){
        try{
-           console.log("Vehicle page gets Mounted")
+           //console.log("Vehicle page gets Mounted")
            
            const number  = this.props.match.params.number;
             const res = await axios.get(`/api/v1/vehicle/${number}`, {
@@ -24,12 +24,12 @@ class VehiclePage extends Component{
                     token : this.props.token
                 }
             })
-            console.log(res.data.data);
+            //console.log(res.data.data);
             const data = res.data.data;
             this.setState({vehData: data});
        }
        catch(err){
-           console.log(err);
+           //console.log(err);
             
             if(err.response.data.err === "Vehicle does not exist")
             {
@@ -40,11 +40,11 @@ class VehiclePage extends Component{
             }
             else if(err.response.data.err.message=== "jwt malformed")
             {
-                console.log("Error was  : ", err.response.data.err.message)
+                //console.log("Error was  : ", err.response.data.err.message)
                 this.props.history.push("/");
             }
             else{
-                console.log("Error was",err.response);
+                //console.log("Error was",err.response);
                 document.getElementById("veh-loading").innerText = "Something went wrong."
                 document.getElementById("veh-loading").style.color = "red"
                 document.getElementById("veh-loading").style.fontWeight = "bold"
@@ -54,7 +54,7 @@ class VehiclePage extends Component{
     }
 
     render(){
-        console.log("Vehicle page render method called");
+        //console.log("Vehicle page render method called");
         return (
             <div id="vehicle-page-div">
                 <Header />

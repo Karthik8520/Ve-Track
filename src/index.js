@@ -8,8 +8,8 @@ import { PersistGate } from 'redux-persist/integration/react'
 import factory from "./redux/store"
 
 const {store, persistor} = factory();
-console.log("store : ", store);
-console.log("persistor : ", persistor);
+// console.log("store : ", store);
+// console.log("persistor : ", persistor);
 
 ReactDOM.render(
   <Provider store={store}>
