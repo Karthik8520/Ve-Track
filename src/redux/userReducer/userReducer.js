@@ -14,7 +14,7 @@ const userReducer = (prevState=initial_data, action)=>{
             break;
         
         case "SIGN_OUT":
-            window.localStorage.removeItem("persist:root");
+            //window.localStorage.removeItem("persist:root");
             return ({
                 ...prevState,
                 user : action.payload

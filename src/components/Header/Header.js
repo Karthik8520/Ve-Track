@@ -1,5 +1,6 @@
 import {connect} from "react-redux"
 import {signout} from "../../redux/userReducer/userActions"
+import {withRouter} from "react-router-dom"
 import "./head.css"
 
 
@@ -7,8 +8,11 @@ import "./head.css"
 
 const Header = (props)=>{
 
+    
     function signOut(e){
-        props.signout(null);
+        e.preventDefault();
+        // props.signout(null);
+        props.history.push("/")
     }
 
     return (
@@ -35,4 +39,4 @@ const mapStateToProps = (state)=>({
     user: state.currentUser.user
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header))

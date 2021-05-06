@@ -16,6 +16,7 @@ class VehiclePage extends Component{
 
     async componentDidMount(){
        try{
+           console.log("Vehicle page gets Mounted")
            
            const number  = this.props.match.params.number;
             const res = await axios.get(`/api/v1/vehicle/${number}`, {
@@ -53,6 +54,7 @@ class VehiclePage extends Component{
     }
 
     render(){
+        console.log("Vehicle page render method called");
         return (
             <div id="vehicle-page-div">
                 <Header />
