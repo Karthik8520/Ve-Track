@@ -13,7 +13,9 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 
 export default () => {
-    const store = createStore(persistedReducer, applyMiddleware(logger));
+    //const store = createStore(persistedReducer, applyMiddleware(logger));
+    const store = createStore(persistedReducer);
     const persistor = persistStore(store)
     return { store, persistor }
 }
+
