@@ -58,7 +58,7 @@ class VehiclePage extends Component{
         return (
             <div id="vehicle-page-div">
                 <Header />
-                <h1>Vehicle details</h1>
+                <h2>Vehicle details</h2>
                 {
                     this.state.vehData==null ? <div id="veh-loading">Loading...</div> 
                     : 

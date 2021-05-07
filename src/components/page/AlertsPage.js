@@ -45,7 +45,7 @@ class Alerts extends Component{
                                 <div><h3>No alerts!</h3></div>
                                 :
                                 <div id="alert-page-card-div">
-                                    <h1>Alerts</h1>
+                                    <h2>Alerts</h2>
                                     <AlertCard data={this.state.data} />
                                 </div>
                             }
